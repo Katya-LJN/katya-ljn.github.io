@@ -4,376 +4,288 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Jiangning (Katya) Lian</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <header id="top-nav">
+      <div class="top-nav-container">
+        <div class="top-nav-left">
+          <span class="name">Jiangning (Katya) Lian</span>
+        </div>
+        <div class="top-nav-right">
+          <ul class="top-nav-links">
+            <li><a href="#bento-grid">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <nav id="desktop-nav">
-      <div class="logo">Jiangning (Katya) Lian</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <a href="#profile" class="home-button" aria-label="Go to home">
+        <img
+        src="./assets/Home.svg"
+        alt="Home"
+        width="25px"
+        height="25px"
+        />
+      </a>
+      <div class="nav-container">
+        <div class="nav-left">
+          <button class="resume-btn" onclick="window.open('./assets/Resume-Jiangning (Katya) Lian.pdf', '_blank')">
+            Resume
+          </button>
+        </div>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="#bento-grid">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">Jiangning (Katya) Lian</div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+        <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu-links">
           <span></span>
           <span></span>
           <span></span>
         </div>
         <div class="menu-links">
+          <li><a href="#bento-grid" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
+
+    <!-- Updated Profile/Hero Section -->
     <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Katya profile picture" />
+      <div class="profile-content">
+        <h1 class="hero-title">
+          <span class="highlight">UI/UX Designer</span><br>& <span class="highlight">Product Designer</span>
+        </h1>
+        <p class="hero-subtitle">
+          Crafting user-first experiences through research, storytelling, and thoughtful design.
+        </p>
+        <div class="profile-buttons">
+          <a href="./assets/Resume-Jiangning (Katya) Lian.pdf" target="_blank" class="cta resume-cta">
+            <span>My Resume</span>
+          </a>
+          <button class="cta linkedin-cta" onclick="window.open('https://www.linkedin.com/in/jnlian/', '_blank')">
+            <span>My LinkedIn</span>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Tech Stack Section -->
+        <div class="tech-stack" style="margin-top: 1rem;">
+          <div class="tech-icons-container">
+            <div class="tech-icons">
+              <img src="./assets/Figma.svg" alt="Figma" />
+              <img src="./assets/VisualStudio.svg" alt="VisualStudio" />
+              <img src="./assets/R.png" alt="R" />
+              <img src="./assets/SPSS.png" alt="SPSS" />
+              <img src="./assets/Photoshop.png" alt="Photoshop" />
+              <img src="./assets/Illustrator.png" alt="Illustrator" />
+              <img src="./assets/InDesign.png" alt="InDesign" />
+              <img src="./assets/Animate.png" alt="Animate" />
+              <img src="./assets/Audition.png" alt="Audition" />
+              <img src="./assets/Notion.svg" alt="Notion" />
+              <!-- Duplicate icons for seamless loop -->
+              <img src="./assets/Figma.svg" alt="Figma" />
+              <img src="./assets/VisualStudio.svg" alt="VisualStudio" />
+              <img src="./assets/R.png" alt="R" />
+              <img src="./assets/SPSS.png" alt="SPSS" />
+              <img src="./assets/Photoshop.png" alt="Photoshop" />
+              <img src="./assets/Illustrator.png" alt="Illustrator" />
+              <img src="./assets/InDesign.png" alt="InDesign" />
+              <img src="./assets/Animate.png" alt="Animate" />
+              <img src="./assets/Audition.png" alt="Audition" />
+              <img src="./assets/Notion.svg" alt="Notion" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Jiangning (Katya) Lian</h1>
-        <p class="section__text__p2"><br>🎨 UX/UI Designer</br><br>📊 Data-Driven Digital Marketer</br><be>🧠 Emerging Media Strategist</br></p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download Resume
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/jnlian/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Katya-LJN'"
-          />
-        </div>
+      <div class="profile-image">
+        <img src="./assets/profile.jpg" alt="Profile picture" class="round-profile-pic">
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
+
+    <section id="bento-grid">
+        <div class="title-container">
         </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+        <div class="projects-list">
+            <!-- Project 1 -->
+            <div class="project-item">
+                <div class="project-content">
+                    <div class="project-title-container">
+                        <h2 class="project-title">FrogHire.ai</h2>
+                        <div class="badges-container">
+                            <span class="discipline-badge">No Code Development</span>
+                            <span class="discipline-badge">UX Research</span>
+                            <span class="discipline-badge">A/B Testing</span>
+                            <span class="discipline-badge">Webflow Design</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Scaled 10K+ users through 10+ redesigns and 30+ interviews. </br> Built 100+ prototypes and boosted UX performance by 23% using data-driven design.</p>
+                </div>
+                <button class="button">
+                    <span class="text">View Detail</span>
+                </button>
             </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>MA in Emerging Media Studies<br />BA in Public Relations and Advertising</p>
+            <!-- Project 2 -->
+            <div class="project-item">
+                <div class="project-content">
+                    <div class="project-title-container">
+                        <h2 class="project-title">Aleoga</h2>
+                        <div class="badges-container">
+                            <span class="discipline-badge">Competitor Analysis</span>
+                            <span class="discipline-badge">User Research</span>
+                            <span class="discipline-badge">Content Strategy</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Aligned brand voice, ran competitor analysis, and increased social following by 1K+.</p>
+                </div>
+                <button class="button">
+                    <span class="text">View Detail</span>
+                </button>
             </div>
+            <!-- Project 3 -->
+            <div class="project-item">
+                <div class="project-content">
+                    <div class="project-title-container">
+                        <h2 class="project-title">NAUSICA NYC</h2>
+                        <div class="badges-container">
+                            <span class="discipline-badge">No Code Development</span>
+                            <span class="discipline-badge">UI Design</span>
+                            <span class="discipline-badge">A/B Testing</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Led full web redesign to improve user flow and CTA performance. </br> Created 6 personas, ran A/B tests, and reduced drop-off on key pages.</p>
+                </div>
+                <button class="button">
+                    <span class="text">View Detail</span>
+                </button>
+            </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal" role="dialog" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <button class="close-modal" aria-label="Close modal">&times;</button>
+        <h2 id="modal-title" class="modal-title"></h2>
+        <div class="modal-body">
+          <div class="image-gallery">
+            <!-- your <video> or <img> slides go here -->
+          </div>
+
+          <div class="modal-info">
+            <h2>Your Project Title</h2>
+            <p>First descriptive paragraph.</p>
+            <p>Second paragraph, etc.</p>
+          </div>
+        </div>
+        <div class="gallery-nav">
+          <button class="prev-btn">&larr;</button>
+          <div class="image-dots"></div>
+          <button class="next-btn">&rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section (Moved after Projects) -->
+    <section id="about">
+      <div class="about-container">
+        <div class="about-left">
+          <p class="section__text__p1">Get To Know More</p>
+          <h1 class="title"><span class="highlight">About Me</span></h1>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/jnlian/" target="_blank" aria-label="LinkedIn">
+              <img
+              src="./assets/LinkedIn.svg"
+              alt="LinkedIn"
+              width="40px"
+              height="40px"
+              />
+            </a>
+            <a href="https://github.com/Katya-LJN" target="_blank" aria-label="GitHub">
+              <img
+              src="./assets/GitHub.svg"
+              alt="GitHub"
+              width="40px"
+              height="40px"
+              />  
+            </a>
+          </div>
+        </div>
+        <div class="about-right">
+          <div class="disciplines-container">
+            <div class="discipline-badge">No Code Development</div>
+            <div class="discipline-badge">UI Design</div>
+            <div class="discipline-badge">UX Research</div>
+            <div class="discipline-badge">Webflow Design</div>
           </div>
           <div class="text-container">
             <p>
-              💼 Currently a UX/UI Designer at FrogHire.ai, 
-              I’ve led over 10 product redesigns that helped boost our user base by 10K+ in just 5 months.
-              From conducting 30+ user interviews 🎙️ to building 100+ Figma prototypes 🖌️, 
-              I thrive at the intersection of user research and visual storytelling.
+              Hi, I'm Jiangning (Katya) Lian — a <span class="highlight">UX/UI Designer & Product Designer</span> with a background in public relations, advertising and emerging media studies.
+            </p>
+            <p>
+              I specialize in creating <span class="highlight">user-centered</span> digital experiences through <span class="highlight">research, prototyping, and visual storytelling</span>.
             </p>
           </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+          <div class="contact-info-grid">
+            <div class="info-item">
+              <h3>Contact</h3>
+              <a href="mailto:katya.ljn@gmail.com" target="_blank">katya.ljn@gmail.com</a>
             </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
+            <div class="info-item">
+              <h3>Location</h3>
+              <p>Boston, MA</p>
+            </div>
+            <div class="info-item">
+              <h3>Availability</h3>
+              <p>Open to work</p>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
+
+    <!-- Simplified Contact Section -->
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <h1 class="title"><span class="highlight">Contact Me</span></h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <img
-            src="./assets/email.png"
-            alt="Email icon"
+            src="./assets/Email.svg"
+            alt="Email contact icon"
             class="icon contact-icon email-icon"
+            width="25px"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+          <p><a href="mailto:katya.ljn@gmail.com" target="_blank">katya.ljn@gmail.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
+            src="./assets/LinkedIn.svg"
+            alt="LinkedIn profile icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/jnlian/" target="_blank" aria-label="Visit LinkedIn profile">Connect with Me on LinkedIn</a></p>
         </div>
       </div>
     </section>
+
     <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+      <p>Copyright &#169; <script>document.write(new Date().getFullYear())</script> Jiangning (Katya) Lian. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
