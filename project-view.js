@@ -2,7 +2,7 @@
 const projectData = {
     project1: {
         title: 'FrogHire.ai',
-        subtitle: 'Chrome extension for international job seekers (OPT/CPT/H-1B)',
+        subtitle: 'Chrome Extension Redesign for International Job Seekers (2024)',
         role: 'UX/UI Designer',
         timeline: 'October 2024 – Present',
         tools: 'Figma, Adobe Creative Suite, HTML, CSS, Google Analytics',
@@ -119,8 +119,8 @@ const projectData = {
         background: {
             title: 'Background & Context',
             content: `The health data economy is broken—centralized platforms store vast amounts of sensitive information, but the users who generate that data rarely benefit from it. Aloega emerged to change that through a decentralized solution that prioritizes privacy, transparency, and equitable value exchange.
-                <br><br>
-                My work sat at the intersection of technical communication and digital engagement. With experience in blockchain messaging and social media storytelling, I was brought in to help Aloega clearly communicate its vision across multiple audiences and channels.`
+            <br><br>
+            My work sat at the intersection of technical communication and digital engagement. With experience in blockchain messaging and social media storytelling, I was brought in to help Aloega clearly communicate its vision across multiple audiences and channels.`
         },
         planning: {
             title: 'Planning & Strategy',
@@ -210,7 +210,7 @@ const projectData = {
         background: {
             title: 'Background & Context',
             content: `Nausicaa NYC, a New York-based designer label, relies exclusively on its website to connect with audiences. Yet despite the brand\'s distinct identity, its previous site failed to communicate its story or support user flow.
-                <br><br>
+            <br><br>
             Leveraging my UX/UI background, I led this redesign using WordPress for implementation, Figma for wireframing, and extensive user research to validate decisions.`
         },
         planning: {
@@ -258,7 +258,8 @@ const projectData = {
                 '🎯 Clearer brand storytelling and product presentation'
             ],
             images: [
-                './assets/project/project3/outcome.mp4'
+                './assets/project/project3/outcome1.mp4',
+                './assets/project/project3/outcome2.mp4'
             ]
         },
         reflection: {
@@ -329,7 +330,7 @@ function loadProject() {
         } else if (projectId === 'project2') {
             videoEl.src = './assets/project/project2/aloega.mp4';
         } else if (projectId === 'project3') {
-            videoEl.src = './assets/project/project3/NAUSICAA.mp4';
+            videoEl.src = './assets/project/project3/NAUSICA.mp4';
         }
 
         videoEl.loop = true;
@@ -467,28 +468,28 @@ function loadProject() {
                                 videoContainer.className = 'video-hover-container';
                                 
                                 const videoEl = document.createElement('video');
-                                videoEl.src = `./assets/project/project3/${idx === 0 ? 'execution1' : 'execution2'}.mp4`;
+                                videoEl.src = `./assets/project/project3/mp4/${idx === 0 ? 'userflow' : 'prototype'}.mp4`;
                                 videoEl.loop = true;
                                 videoEl.muted = true;
                                 videoEl.playsInline = true;
                                 
-                          const hoverHint = document.createElement('div');
-                          hoverHint.className = 'hover-to-play-hint';
-                          hoverHint.innerHTML = '<span>Hover to play</span>';
-                          
+                                const hoverHint = document.createElement('div');
+                                hoverHint.className = 'hover-to-play-hint';
+                                hoverHint.innerHTML = '<span>Hover to play</span>';
+                                
                                 videoContainer.addEventListener('mouseenter', () => {
                                     videoEl.play();
-                            hoverHint.style.opacity = '0';
-                          });
+                                    hoverHint.style.opacity = '0';
+                                });
                                 videoContainer.addEventListener('mouseleave', () => {
                                     videoEl.pause();
-                            hoverHint.style.opacity = '1';
-                          });
-                          
+                                    hoverHint.style.opacity = '1';
+                                });
+                                
                                 videoContainer.appendChild(videoEl);
                                 videoContainer.appendChild(hoverHint);
                                 item.appendChild(videoContainer);
-                        } else {
+                            } else {
                                 const imageContainer = document.createElement('div');
                                 imageContainer.className = 'video-hover-container';
                                 
@@ -523,7 +524,7 @@ function loadProject() {
             }
         }
     });
-
+    
     // Set up visual design gallery
     if (project.visualDesign && project.visualDesign.images) {
         setupVisualDesignGallery(project.visualDesign.images);
@@ -606,10 +607,10 @@ function showSectionImage(container, index) {
     // Remove old active classes
     const prevMedia = container.querySelector('.active');
     if (prevMedia) prevMedia.classList.remove('active');
-
+    
     const prevDot = container.querySelector('.section-media-dot.active');
     if (prevDot) prevDot.classList.remove('active');
-
+    
     // Add new active classes
     const mediaElements = container.querySelectorAll('.video-hover-container, img');
     const dots = container.querySelectorAll('.section-media-dot');
@@ -724,12 +725,10 @@ function setupVisualDesignGallery(images) {
         ];
     } else if (projectId === 'project3') {
         imageDetails = [
-            { src: './assets/project/project3/Visual Design/color.png', title: 'Color Palette' },
-            { src: './assets/project/project3/Visual Design/Banner.png', title: 'Banner' },
-            { src: './assets/project/project3/Visual Design/Home.png', title: 'Homepage Design' },
-            { src: './assets/project/project3/Visual Design/Journal.png', title: 'Journal Page' },
-            { src: './assets/project/project3/Visual Design/Lookbook1.png', title: 'Lookbook Gallery' },
-            { src: './assets/project/project3/Visual Design/Lookbook2.png', title: 'Lookbook Gallery' }
+            { src: './assets/project/project3/Visual Design/style-guide.png', title: 'Style Guide' },
+            { src: './assets/project/project3/Visual Design/components.png', title: 'Component Library' },
+            { src: './assets/project/project3/Visual Design/product-cards.png', title: 'Product Cards' },
+            { src: './assets/project/project3/Visual Design/mobile-views.png', title: 'Mobile Views' }
         ];
     }
 
@@ -742,7 +741,7 @@ function setupVisualDesignGallery(images) {
         galleryItem.style.backgroundColor = 'var(--surface-2)';
         galleryItem.style.cursor = 'pointer';
         galleryItem.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-        
+
         const img = document.createElement('img');
         img.src = src;
         img.alt = title;
