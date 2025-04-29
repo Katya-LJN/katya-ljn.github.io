@@ -2,7 +2,7 @@
 const projectData = {
     project1: {
         title: 'FrogHire.ai',
-        subtitle: 'Chrome Extension Redesign for International Job Seekers (2024)',
+        subtitle: 'Chrome extension for international job seekers (OPT/CPT/H-1B)',
         role: 'UX/UI Designer',
         timeline: 'October 2024 – Present',
         tools: 'Figma, Adobe Creative Suite, HTML, CSS, Google Analytics',
@@ -187,10 +187,10 @@ const projectData = {
         }
     },
     project3: {
-        title: 'NAUSICA NYC',
+        title: 'NAUSICAA NYC',
         subtitle: 'A fashion-forward e-commerce platform blending artistic vision with user-centric design.',
         role: 'UX/UI Designer',
-        timeline: '2023',
+        timeline: 'September 2023 - December 2023',
         tools: 'HTML, CSS, WordPress, Canva, Adobe Creative Suite',
         overview: {
             title: 'Project Overview',
@@ -233,8 +233,8 @@ const projectData = {
         execution: {
             title: 'Execution',
             content: [
-                '<strong>WordPress Development:</strong> Rebuilt site structure with clearer categories and navigation.',
                 '<strong>UI Enhancement:</strong> Built WordPress layouts reflecting the brand\'s visual tone.',
+                '<strong>Navigation Optimization:</strong> Rebuilt site structure with clearer categories and navigation.',
                 '<strong>Testing:</strong> Conducted A/B tests for navigation and conversion optimization.',
                 '<strong>Visual Design:</strong> Created cohesive brand identity across all touchpoints.'
             ]
@@ -258,8 +258,7 @@ const projectData = {
                 '🎯 Clearer brand storytelling and product presentation'
             ],
             images: [
-                './assets/project/project3/outcome1.mp4',
-                './assets/project/project3/outcome2.mp4'
+                './assets/project/project3/outcome.mp4',
             ]
         },
         reflection: {
@@ -330,7 +329,7 @@ function loadProject() {
         } else if (projectId === 'project2') {
             videoEl.src = './assets/project/project2/aloega.mp4';
         } else if (projectId === 'project3') {
-            videoEl.src = './assets/project/project3/NAUSICA.mp4';
+            videoEl.src = './assets/project/project3/NAUSICAA.mp4';
         }
 
         videoEl.loop = true;
@@ -468,7 +467,7 @@ function loadProject() {
                                 videoContainer.className = 'video-hover-container';
                                 
                                 const videoEl = document.createElement('video');
-                                videoEl.src = `./assets/project/project3/mp4/${idx === 0 ? 'userflow' : 'prototype'}.mp4`;
+                                videoEl.src = `./assets/project/project3/${idx === 0 ? 'execution1' : 'execution2'}.mp4`;
                                 videoEl.loop = true;
                                 videoEl.muted = true;
                                 videoEl.playsInline = true;
@@ -725,10 +724,12 @@ function setupVisualDesignGallery(images) {
         ];
     } else if (projectId === 'project3') {
         imageDetails = [
-            { src: './assets/project/project3/Visual Design/style-guide.png', title: 'Style Guide' },
-            { src: './assets/project/project3/Visual Design/components.png', title: 'Component Library' },
-            { src: './assets/project/project3/Visual Design/product-cards.png', title: 'Product Cards' },
-            { src: './assets/project/project3/Visual Design/mobile-views.png', title: 'Mobile Views' }
+            { src: './assets/project/project3/Visual Design/color.png', title: 'Color Palette' },
+            { src: './assets/project/project3/Visual Design/Banner.png', title: 'Banner' },
+            { src: './assets/project/project3/Visual Design/Home.png', title: 'Home Page' },
+            { src: './assets/project/project3/Visual Design/Journal.png', title: 'Journal' },
+            { src: './assets/project/project3/Visual Design/Lookbook1.png', title: 'Lookbook - Fall 22' },
+            { src: './assets/project/project3/Visual Design/Lookbook2.png', title: 'Lookbook - Fall 23' }
         ];
     }
 

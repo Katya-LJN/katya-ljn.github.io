@@ -356,7 +356,7 @@ section:target {
   min-height: 100vh;
   padding: 2rem 5%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem; /* Reduced from 4rem */
   flex-wrap: nowrap;
   max-width: 1400px;
