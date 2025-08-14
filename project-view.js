@@ -712,7 +712,7 @@ function setupVisualDesignGallery(images) {
             { src: './assets/project/project1/Visual Design/color.png', title: 'Color Palette' },
             { src: './assets/project/project1/Visual Design/Newsletter Banner.png', title: 'Newsletter Banner' },
             { src: './assets/project/project1/Visual Design/Monthly Keywords Poster.png', title: 'Monthly Keywords Poster' },
-            { src: './assets/project/project1/Visual Design/2 Top Sponsor Companies.png', title: 'Top Sponsor Companies' },
+            { src: './assets/project/project1/Visual Design/Top Sponsor Companies.png', title: 'Top Sponsor Companies' },
             { src: './assets/project/project1/Visual Design/2 Step Guide.png', title: '2-Step Guide' },
             { src: './assets/project/project1/Visual Design/3 Stages.png', title: '3-Phase Process' },
             { src: './assets/project/project1/Visual Design/Small promo tile.png', title: 'Promotional Tile' },
