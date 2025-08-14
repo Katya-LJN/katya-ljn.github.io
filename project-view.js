@@ -87,10 +87,13 @@ const projectData = {
                 './assets/project/project1/Visual Design/color.png',
                 './assets/project/project1/Visual Design/Newsletter Banner.png',
                 './assets/project/project1/Visual Design/Monthly Keywords Poster.png',
+                './assets/project/project1/Visual Design/Top Sponsor Companies.png',
                 './assets/project/project1/Visual Design/BusinessCard Front.png',
                 './assets/project/project1/Visual Design/BusinessCard Back.png',
-                './assets/project/project1/Visual Design/FrogHire Meeting Background V2.png',
+                './assets/project/project1/Visual Design/FrogHire Meeting Background V7.png',
                 './assets/project/project1/Visual Design/Small promo tile.png',
+                './assets/project/project1/Visual Design/3 Stages.png',
+                './assets/project/project1/Visual Design/Coupon.png',
                 './assets/project/project1/Visual Design/2 Step Guide.png'
             ]
         }
@@ -709,11 +712,11 @@ function setupVisualDesignGallery(images) {
             { src: './assets/project/project1/Visual Design/color.png', title: 'Color Palette' },
             { src: './assets/project/project1/Visual Design/Newsletter Banner.png', title: 'Newsletter Banner' },
             { src: './assets/project/project1/Visual Design/Monthly Keywords Poster.png', title: 'Monthly Keywords Poster' },
+            { src: './assets/project/project1/Visual Design/2 Top Sponsor Companies.png', title: 'Top Sponsor Companies' },
             { src: './assets/project/project1/Visual Design/2 Step Guide.png', title: '2-Step Guide' },
+            { src: './assets/project/project1/Visual Design/3 Stages.png', title: '3-Phase Process' },
             { src: './assets/project/project1/Visual Design/Small promo tile.png', title: 'Promotional Tile' },
-            { src: './assets/project/project1/Visual Design/FrogHire Meeting Background V2.png', title: 'Meeting Background' },
-            { src: './assets/project/project1/Visual Design/BusinessCard Back.png', title: 'Business Card Design Back' },
-            { src: './assets/project/project1/Visual Design/BusinessCard Front.png', title: 'Business Card Design Front' }
+            { src: './assets/project/project1/Visual Design/FrogHire Meeting Background V7.png', title: 'Meeting Background' }
         ];
     } else if (projectId === 'project2') {
         imageDetails = [
