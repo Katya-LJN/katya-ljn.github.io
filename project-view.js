@@ -101,7 +101,7 @@ const projectData = {
     project2: {
         title: 'Aloega',
         subtitle: 'A Web3 healthcare ecosystem empowering secure health data sharing through blockchain technology.',
-        role: 'Marketing Intern',
+        role: 'Marketing Specialist',
         timeline: 'June 2024 - October 2024',
         tools: 'Press Release, Social Media, Content Creation, Copywriting',
         overview: {
