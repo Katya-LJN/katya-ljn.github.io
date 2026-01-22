@@ -5,87 +5,14 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// Hide navigation bars on scroll down, show on scroll up
-let lastScroll = 0;
-let isScrolling = false;
-let lastScrollTime = 0;
-const scrollCooldown = 500; // Reduced from 1000ms to 800ms for better responsiveness
-let scrollDelta = 0;
-const scrollThreshold = 80; // Increased from 50 to 100 for less sensitive scrolling
-const scrollResetTime = 200; // Increased from 150ms to 300ms
-
 // Initialize sections and navigation
 document.addEventListener('DOMContentLoaded', () => {
-  // Get the hash from URL or default to profile
-  let hash = window.location.hash;
-  
-  // If no hash, check scroll position to determine current section
-  if (!hash) {
-    const sections = document.querySelectorAll('section');
-    const scrollPosition = window.scrollY + (window.innerHeight / 2);
-    
-    for (const section of sections) {
-      const rect = section.getBoundingClientRect();
-      const sectionTop = window.scrollY + rect.top;
-      const sectionBottom = sectionTop + rect.height;
-      
-      if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
-        hash = `#${section.id}`;
-        break;
-      }
-    }
-    
-    // Default to profile if no section is found
-    if (!hash) {
-      hash = '#profile';
-    }
-  }
-
+  const hash = window.location.hash || '#profile';
   const targetSection = document.querySelector(hash);
-  const sections = document.querySelectorAll('section');
-
-  // Make all sections visible initially with 0 opacity
-  sections.forEach(section => {
-    section.style.visibility = 'visible';
-    section.style.opacity = '0';
-    section.classList.remove('active');
-  });
-
-  // Activate target section
   if (targetSection) {
-    targetSection.classList.add('active');
-    targetSection.style.opacity = '1';
-    
-    // Set appropriate navigation state
-    if (hash === '#profile') {
-      document.body.classList.add('on-profile');
-      document.body.classList.remove('not-on-profile');
-    } else {
-      document.body.classList.remove('on-profile');
-      document.body.classList.add('not-on-profile');
-    }
-
-    // Ensure proper scroll position after a short delay
-    setTimeout(() => {
-      targetSection.scrollIntoView({ behavior: 'instant' });
-      
-      // Make target section fully visible
-      targetSection.style.visibility = 'visible';
-      targetSection.style.opacity = '1';
-      
-      // Update other sections based on viewport visibility
-      updateSectionsVisibility();
-    }, 100);
-  } else {
-    // If no valid target, default to first section
-    const firstSection = sections[0];
-    if (firstSection) {
-      firstSection.classList.add('active');
-      firstSection.style.opacity = '1';
-      firstSection.style.visibility = 'visible';
-      document.body.classList.add('on-profile');
-    }
+    targetSection.scrollIntoView({ behavior: 'instant', block: 'start' });
   }
+  updateScrollState();
 
   // Remove any existing click handlers and add new ones
   const navLinks = document.querySelectorAll('a[href^="#"]');
@@ -109,24 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Function to update sections visibility based on viewport
-function updateSectionsVisibility() {
-  const sections = document.querySelectorAll('section');
-  const viewportTop = window.scrollY;
-  const viewportBottom = viewportTop + window.innerHeight;
-  const buffer = window.innerHeight * 0.3; // Reduced buffer for better performance
-
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    if (rect.bottom >= -buffer && rect.top <= window.innerHeight + buffer) {
-      section.style.visibility = 'visible';
-      if (section.classList.contains('active')) {
-        section.style.opacity = '1';
-      }
-    }
-  });
-}
-
 // Debounce scroll events
 function debounce(func, wait) {
   let timeout;
@@ -140,47 +49,22 @@ function debounce(func, wait) {
   };
 }
 
-// Optimize scroll handler
 const handleScroll = debounce(() => {
-  if (!isScrolling) {
-    requestAnimationFrame(() => {
-      updateSectionsVisibility();
-    });
-  }
-}, 16);
+  updateScrollState();
+}, 50);
 
 window.addEventListener('scroll', handleScroll, { passive: true });
 
 // Handle navigation link clicks
-async function handleNavClick(e) {
+function handleNavClick(e) {
   e.preventDefault();
   e.stopPropagation();
   
-  // Prevent multiple clicks while transitioning
-  if (isScrolling) return;
-  
   const targetId = this.getAttribute('href').slice(1);
   const targetSection = document.getElementById(targetId);
-  
   if (!targetSection) return;
   
-  const currentSection = document.querySelector('section.active');
-  if (currentSection === targetSection) return;
-  
-  // Set scrolling state immediately
-  isScrolling = true;
-  
-  try {
-    // Remove active class from all sections except current
-    document.querySelectorAll('section').forEach(section => {
-      if (section !== currentSection) {
-        section.classList.remove('active');
-        section.style.opacity = '0';
-      }
-    });
-
-    // Handle transition
-    await handleSectionTransition(currentSection, targetSection);
+  targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     
     // Close hamburger menu if open
     const menu = document.querySelector(".menu-links");
@@ -198,55 +82,6 @@ async function handleNavClick(e) {
       document.body.classList.remove('on-profile');
       document.body.classList.add('not-on-profile');
     }
-  } catch (error) {
-    console.error('Navigation error:', error);
-  } finally {
-    // Reset scrolling state after transition
-    setTimeout(() => {
-      isScrolling = false;
-    }, scrollCooldown);
-  }
-}
-
-// Handle section transitions
-async function handleSectionTransition(currentSection, nextSection) {
-  return new Promise((resolve, reject) => {
-    try {
-      if (!currentSection || !nextSection) {
-        resolve();
-        return;
-      }
-
-      // Ensure both sections are visible during transition
-      currentSection.style.visibility = 'visible';
-      nextSection.style.visibility = 'visible';
-      currentSection.style.opacity = '1';
-      nextSection.style.opacity = '0';
-      
-      // Start transition
-      currentSection.classList.remove('active');
-      currentSection.classList.add('fade-out');
-      
-      requestAnimationFrame(() => {
-        nextSection.scrollIntoView({ behavior: 'smooth' });
-        currentSection.classList.remove('fade-out');
-        currentSection.style.opacity = '0';
-        
-        requestAnimationFrame(() => {
-          nextSection.classList.add('active');
-          nextSection.style.opacity = '1';
-          
-          // Update visibility of all sections
-          updateSectionsVisibility();
-          
-          resolve();
-        });
-      });
-    } catch (error) {
-      console.error('Section transition error:', error);
-      reject(error);
-    }
-  });
 }
 
 // More accurate section detection
@@ -282,20 +117,6 @@ function updateScrollState() {
   } else {
     document.body.classList.remove('on-profile');
     document.body.classList.add('not-on-profile');
-  }
-
-  // Ensure current section is visible
-  const currentSectionElement = document.getElementById(currentSection);
-  if (currentSectionElement) {
-    document.querySelectorAll('section').forEach(section => {
-      if (section === currentSectionElement) {
-        section.style.opacity = '1';
-        section.classList.add('active');
-      } else {
-        section.style.opacity = '0';
-        section.classList.remove('active');
-      }
-    });
   }
 }
 
@@ -527,72 +348,6 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') prevImage();
   }
 });
-
-// Smooth scroll handling with improved sensitivity
-window.addEventListener('wheel', async (e) => {
-  e.preventDefault();
-  
-  const now = Date.now();
-  
-  // Don't process new scroll events if we're still scrolling
-  if (isScrolling) {
-    return;
-  }
-  
-  // Reset scroll accumulation if enough time has passed
-  if (now - lastScrollTime > scrollResetTime) {
-    scrollDelta = 0;
-  }
-  
-  // Accumulate scroll amount with direction consideration
-  scrollDelta += e.deltaY;
-  lastScrollTime = now;
-  
-  // Don't proceed if we haven't scrolled enough
-  if (Math.abs(scrollDelta) < scrollThreshold) {
-    return;
-  }
-  
-  const sections = document.querySelectorAll('section');
-  const sectionsArray = Array.from(sections);
-  const currentSection = getCurrentSection();
-  const currentIndex = sectionsArray.findIndex(section => section.id === currentSection);
-  
-  if (currentIndex === -1) return;
-  
-  isScrolling = true;
-  
-  try {
-    // Determine scroll direction based on accumulated delta
-    if (scrollDelta > 0 && currentIndex < sections.length - 1) {
-      // Scrolling down
-      await handleSectionTransition(sectionsArray[currentIndex], sectionsArray[currentIndex + 1]);
-      // Update navigation visibility
-      if (currentIndex === 0) {
-        document.body.classList.remove('on-profile');
-        document.body.classList.add('not-on-profile');
-      }
-    } else if (scrollDelta < 0 && currentIndex > 0) {
-      // Scrolling up
-      await handleSectionTransition(sectionsArray[currentIndex], sectionsArray[currentIndex - 1]);
-      // Update navigation visibility
-      if (currentIndex === 1) {
-        document.body.classList.add('on-profile');
-        document.body.classList.remove('not-on-profile');
-      }
-    }
-  } catch (error) {
-    console.error('Transition error:', error);
-  } finally {
-    // Reset scroll state
-    scrollDelta = 0;
-    
-    // Add a delay before allowing new scroll events
-    setTimeout(() => {
-      isScrolling = false;
-    }, scrollCooldown);
-  }
-}, { passive: false });
 
 // Add cleanup for hamburger menu
 window.addEventListener('resize', () => {

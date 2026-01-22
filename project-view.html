@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project View</title>
+    <link rel="icon" href="./assets/me.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="project-view.css">
 </head>
@@ -30,136 +31,750 @@
     </header>
 
     <div class="project-view-container">
-        <div class="project-header">
-            <div class="project-info">
-                <h1 class="project-title"></h1>
-                <p class="project-subtitle"></p>
+        <div class="project-content" data-project="project1">
+            <div class="project-header">
+                <div class="project-info">
+                    <h1 class="project-title">FrogHire.ai</h1>
+                    <p class="project-subtitle">Chrome Extension & Web Platform for Job Seekers</p>
+                </div>
+                <div class="project-media">
+                    <div class="video-link-container">
+                        <video src="./assets/project/project1/Heading.mp4" autoplay muted loop playsinline></video>
+                        <a class="video-link-overlay" href="https://www.froghire.ai" target="_blank">
+                            <span>View Site</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="project-media">
-                <div class="video-link-container">
-                    <!-- Video will be dynamically added here -->
+
+            <div class="project-meta">
+                <div class="meta-group">
+                    <h3>Role</h3>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div class="meta-group">
+                    <h3>Timeline</h3>
+                    <p>October 2024 – Present</p>
+                </div>
+                <div class="meta-group">
+                    <h3>Skills</h3>
+                    <p>Figma · HTML/CSS · Google Analytics · Information Architecture · A/B Testing<br>Usability Testing · Accessibility Testing (WCAG 2.1 AA) · Design System<br>Adobe Creative Suite · Canva · Mailchimp · SaaS</p>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="overview-section">
+                    <h2>Overview</h2>
+                    <div class="overview-content">
+                        <p>
+                            FrogHire.ai is a job-search platform designed to help both domestic and international job seekers navigate a competitive and fragmented hiring landscape. The product combines real-time <strong>job analysis, automation, and guided workflows to help users evaluate roles, optimize applications, and manage</strong> their job search more effectively.
+                        </p>
+                        <br>
+                        <p>
+                            As the UI/UX Designer, I <strong>own core UX decisions across navigation, interaction patterns, and system structure</strong>, leading end-to-end design across the Chrome extension and web platform in close partnership with product, engineering, and growth teams. My work directly supported a platform used by <strong>100K+ active user</strong> and positioned the product for continued scale.</p>
+                        <br>
+                        <p><strong>This project spanned:</strong></p>
+                        <ul>
+                            <li>End-to-end redesign of the core UI and interaction model across the Chrome extension and web platform.</li>
+                            <li>Introduction of a persistent sidebar navigation, replacing a fragile floating UI and improving feature discoverability and workflow stability.</li>
+                            <li>Design of scalable UI patterns and reusable components to support rapid iteration and long-term product growth.</li>
+                            <li>Usability testing and data-informed iteration, refining visual hierarchy and interaction clarity to improve engagement.</li>
+                            <li>Close collaboration with product and engineering to evolve FrogHire.ai from a niche tool into a scalable, user-first platform.</li>
+                            </ul>
+                    </div>
+                </div>
+
+                <nav class="section-navigation">
+                    <div class="nav-heading">Contents</div>
+                    <div class="nav-wrapper">
+                        <a href="#project1-background" class="section-nav-item active">
+                            <span class="nav-number">01</span>
+                            <span class="nav-title">Background & Context</span>
+                        </a>
+                        <a href="#project1-planning" class="section-nav-item">
+                            <span class="nav-number">02</span>
+                            <span class="nav-title">Planning & Strategy</span>
+                        </a>
+                        <a href="#project1-execution" class="section-nav-item">
+                            <span class="nav-number">03</span>
+                            <span class="nav-title">Execution</span>
+                        </a>
+                        <a href="#project1-challenges" class="section-nav-item">
+                            <span class="nav-number">04</span>
+                            <span class="nav-title">Challenges & Solutions</span>
+                        </a>
+                        <a href="#project1-outcomes" class="section-nav-item">
+                            <span class="nav-number">05</span>
+                            <span class="nav-title">Outcomes & Impact</span>
+                        </a>
+                        <a href="#project1-visual-design" class="section-nav-item">
+                            <span class="nav-number">06</span>
+                            <span class="nav-title">Visual Design</span>
+                        </a>
+                        <a href="#project1-reflection" class="section-nav-item">
+                            <span class="nav-number">07</span>
+                            <span class="nav-title">Reflection</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div id="project1-background" class="project-section background">
+                <h2>Background & Context</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <p>
+                            FrogHire.ai is a job-search platform that helps users <strong>analyze job postings, understand skill requirements, and manage applications</strong> across multiple hiring platforms. The product operates across two core surfaces: a Chrome extension that embeds job insights directly into live job postings, and a web platform that supports deeper analysis, planning, and tracking.
+                        </p>
+                        <p>
+                            I joined FrogHire.ai during a phase of rapid feature expansion, where new capabilities, such as job analysis, skill extraction, and workflow management, were being added quickly. The primary challenge was to <strong>organize complex, data-driven features into clear, usable workflows</strong> while maintaining performance, consistency, and trust at scale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project1-planning" class="project-section planning">
+                <h2>Planning & Strategy</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <ul>
+                            <li><strong>User Research:</strong> Conducted 30+ interviews and live screen shares to validate real job-search behavior across the Chrome extension and web platform.</li>
+                            <li><strong>Analytics Review:</strong> Used Google Analytics and Metabase to identify drop-offs and underused features, driving a flow re-architecturte.</li>
+                            <li><strong>Design Audit:</strong> Audited existing interfaces to identify navigation instability, inconsistent interaction patterns, and WCAG accessibility gaps, defining requirements for a more scalable, accessible system.</li>
+                        </ul>
+                    </div>
+                    <div class="section-media">
+                        <img src="./assets/project/project1/planning1.png" alt="Planning diagram 1" class="active">
+                        <img src="./assets/project/project1/planning2.png" alt="Planning diagram 2">
+                    </div>
+                </div>
+            </div>
+
+            <div id="project1-execution" class="project-section execution">
+                <h2>Execution</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <div class="execution-grid">
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Dashboard Design:</strong> Designed and shipped a centralized dashboard consolidating job listings, skill match signals, and application tracking.</div>
+                                <div class="execution-item-image">
+                                    <div class="video-hover-container">
+                                        <video src="./assets/project/project1/Execution1.mp4" loop muted playsinline></video>
+                                        <div class="hover-to-play-hint"><span>Hover to play</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Chrome Extension Experience</strong> Redesigned core extension interactions to surface job insights directly inside live job postings, ensuring visibility without disrupting users’ natural browsing flow.</div>
+                                <div class="execution-item-image">
+                                    <div class="video-hover-container">
+                                        <video src="./assets/project/project1/Execution2.mp4" loop muted playsinline></video>
+                                        <div class="hover-to-play-hint"><span>Hover to play</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Prototyping & Validation:</strong> Produced 100+ Figma prototypes and iterated through usability testing and analytics feedback to validate job analysis flows, filtering logic, and dashboard interactions.</div>
+                                <div class="execution-item-image">
+                                    <img src="./assets/project/project1/prototype.png" alt="Prototype">
+                                </div>
+                            </div>
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Visual System & Assets:</strong> Designed 50+ scalable UI and brand assets, supporting product relaunches, feature rollouts, and consistent presentation.</div>
+                                <div class="execution-item-image">
+                                    <img src="./assets/project/project1/backdrop.png" alt="Backdrop">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project1-challenges" class="project-section challenges">
+                <h2>Challenges & Solutions</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <div class="challenge-block">
+                            <p><strong>Turning fragmented job data into actionable insight:</strong> <br>Job listings contained dense, inconsistent information, for example,skills, sponsorship signals, and requirements were scattered across descriptions, making it difficult for users to quickly assess fit.</p>
+                            <p><strong>🛠 Solution:</strong> Designed a structured job analysis model that extracts and groups key signals, such as required skills, optional skills, and sponsorship indicators, into a consistent, scannable layout across the dashboard and extension. This reduced interpretation effort and helped users make faster, more confident decisions.</p>
+                        </div>
+                        <div class="challenge-block">
+                            <p><strong>Balancing visibility with non-disruption inside job platforms:</strong> <br>Surfacing insights directly within third-party job sites risked overwhelming users or breaking their natural browsing flow.</p>
+                            <p><strong>🛠 Solution:</strong> Redesigned the Chrome extension experience to feel embedded rather than intrusive, using restrained visual hierarchy, progressive disclosure, and contextual placement. Insights remained visible when needed, while preserving the integrity of the host platform’s UI.</p>
+                        </div>
+                        <div class="challenge-block">
+                            <p><strong>Scaling feature depth without overwhelming users:</strong> <br>As FrogHire expanded from a niche tool into a broader job-search platform, the growing number of features increased the risk of cognitive overload and poor discoverability.</p>
+                            <p><strong>🛠 Solution:</strong> Introduced a persistent sidebar navigation system and later a centralized dashboard, creating a clear mental model for how features relate. This systemized approach supported feature growth while keeping workflows predictable and manageable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project1-outcomes" class="project-section outcomes">
+                <h2>Outcomes & Impact</h2>
+                <div class="section-body">
+                    <div class="section-text outcomes-top">
+                        <ul>
+                            <li>Scaled redesigned workflows to <strong>100K+ active users</strong> by leading 30+ web and Chrome extension feature redesigns in <strong>Figma</strong> and shipping 200+ production-ready wireframes, prototypes, and components.</li>
+                            <li>Improved core engagement by <strong>23%</strong> by using <strong>Google Analytics</strong>, <strong>funnel analysis</strong>, and <strong>usability testing</strong> to re-architect key flows and interaction patterns across the dashboard and extension.</li>
+                        </ul>
+                    </div>
+                    <div class="section-media">
+                        <div class="video-hover-container active">
+                            <video src="./assets/project/project1/Outcome1.mp4" loop muted playsinline></video>
+                            <div class="hover-to-play-hint"><span>Hover to play</span></div>
+                        </div>
+                        <div class="video-hover-container">
+                            <video src="./assets/project/project1/Outcome2.mp4" loop muted playsinline></video>
+                            <div class="hover-to-play-hint"><span>Hover to play</span></div>
+                        </div>
+                    </div>
+                    <div class="section-text outcomes-rest">
+                        <ul>
+                            <li>Optimized interaction quality with experimentation, running <strong>A/B tests on layouts and components</strong> and using analytics to validate changes in job analysis, filtering, and navigation efficiency.</li>
+                            <li>Enabled institutional rollout by leading <strong>WCAG 2.1 AA accessibility updates (contrast, hierarchy, keyboard behavior, semantics)</strong> across university-facing interfaces.</li>
+                            <li>Supported <strong>40% growth in user acquisition</strong> by designing on-brand UI and visual systems used in campaigns, along with modular HTML/CSS Mailchimp templates for product updates, pricing, and onboarding.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project1-visual-design" class="project-section visual-design">
+                <h2>Visual Design</h2>
+                <div class="design-gallery">
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project1/Visual Design/color.png" alt="Color Palette">
+                        <div class="design-title-overlay">Color Palette</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project1/Visual Design/Newsletter Banner.png" alt="Newsletter Banner">
+                        <div class="design-title-overlay">Newsletter Banner</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project1/Visual Design/Business Card.png" alt="Business Card">
+                        <div class="design-title-overlay">Business Card</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project1/Visual Design/FrogHire Meeting Background V7.png" alt="Meeting Background">
+                        <div class="design-title-overlay">Meeting Background</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project1/Visual Design/3 Stages.png" alt="3 Stages">
+                        <div class="design-title-overlay">3 Stages</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project1/Visual Design/Coupon.png" alt="Coupon">
+                        <div class="design-title-overlay">Coupon</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project1/Visual Design/Skills.png" alt="Skills Poster">
+                        <div class="design-title-overlay">Skills Poster</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project1/Visual Design/PERM Filing Certification Rate.png" alt="PERM Filing Certification Rate">
+                        <div class="design-title-overlay">PERM Filing Certification Rate</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project1-reflection" class="project-section reflection">
+                <h2>Reflection</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <p>
+                            This project strengthened my ability to <strong>design scalable product systems under real-world constraints</strong>, balancing speed, complexity, and usability across both a Chrome extension and a web platform. I learned how to evolve a product from a niche tool into a multi-surface system by making deliberate decisions around navigation, information hierarchy, and validation through analytics and testing.
+                            <br>
+                            <br>
+                            Working closely with engineering and product teams reinforced the importance of <strong>designing for long-term growth, accessibility, and maintainability</strong>, not just feature delivery.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="project-meta">
-            <div class="meta-group">
-                <h3>Role</h3>
-                <p></p>
+        <div class="project-content" data-project="project2">
+            <div class="project-header">
+                <div class="project-info">
+                    <h1 class="project-title">Aloega</h1>
+                    <p class="project-subtitle">A Web3 healthcare ecosystem empowering secure health data sharing through blockchain technology.</p>
+                </div>
+                <div class="project-media">
+                    <div class="video-link-container">
+                        <video src="./assets/project/project2/aloega.mp4" autoplay muted loop playsinline></video>
+                        <a class="video-link-overlay" href="https://www.linkedin.com/company/aloega/" target="_blank">
+                            <span>View Site</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="meta-group">
-                <h3>Timeline</h3>
-                <p></p>
-            </div>
-            <div class="meta-group">
-                <h3>Tools</h3>
-                <p></p>
-            </div>
-        </div>
 
-        <div class="content-wrapper">
-            <div class="overview-section">
-                <h2>Overview</h2>
-                <div class="overview-content"></div>
+            <div class="project-meta">
+                <div class="meta-group">
+                    <h3>Role</h3>
+                    <p>Marketing Intern</p>
+                </div>
+                <div class="meta-group">
+                    <h3>Timeline</h3>
+                    <p>June 2024 - October 2024</p>
+                </div>
+                <div class="meta-group">
+                    <h3>Skills</h3>
+                    <p>Press Release · Content Creation · Copywriting<br>Social Analytics · Content Calendar · Adobe Creative Suite · Canva</p>
+                </div>
             </div>
-        </div>
 
-        <nav class="section-navigation">
-            <div class="nav-wrapper">
-                <a href="#background" class="section-nav-item active">
-                    <span class="nav-number">01</span>
-                    <span class="nav-title">Background & Context</span>
-                </a>
-                <a href="#planning" class="section-nav-item">
-                    <span class="nav-number">02</span>
-                    <span class="nav-title">Planning & Strategy</span>
-                </a>
-                <a href="#execution" class="section-nav-item">
-                    <span class="nav-number">03</span>
-                    <span class="nav-title">Execution</span>
-                </a>
-                <a href="#challenges" class="section-nav-item">
-                    <span class="nav-number">04</span>
-                    <span class="nav-title">Challenges & Solutions</span>
-                </a>
-                <a href="#outcomes" class="section-nav-item">
-                    <span class="nav-number">05</span>
-                    <span class="nav-title">Outcomes & Impact</span>
-                </a>
-                <a href="#visual-design" class="section-nav-item">
-                    <span class="nav-number">07</span>
-                    <span class="nav-title">Visual Design</span>
-                </a>
-                <a href="#reflection" class="section-nav-item">
-                    <span class="nav-number">06</span>
-                    <span class="nav-title">Reflection</span>
-                </a>
+            <div class="content-wrapper">
+                <div class="overview-section">
+                    <h2>Overview</h2>
+                    <div class="overview-content">
+                        <p>
+                            Aloega is a Web3 healthcare platform focused on secure, user-controlled health data sharing through blockchain technology. The product required translating <strong>technically dense concepts, such asprivacy, decentralization, and data ownership, into clear, trustworthy messaging</strong> across multiple channels.
+                        </p>
+                        <br>
+                        <p>
+                            As a Marketing Specialist, I owned <strong>content strategy, messaging frameworks, and visual communication</strong> across social platforms and long-form content, working closely with product and leadership to align technical capabilities with user understanding and adoption.
+                        </p>
+                        <br>
+                        <p><strong>This project spanned:</strong></p>
+                        <ul>
+                            <li>Message repositioning and technical content translation</li>
+                            <li>Social media strategy and community engagement</li>
+                            <li>Blog content creation and whitepaper adaptation</li>
+                            <li>Brand voice development and stakeholder alignment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <nav class="section-navigation">
+                    <div class="nav-heading">Contents</div>
+                    <div class="nav-wrapper">
+                        <a href="#project2-background" class="section-nav-item active">
+                            <span class="nav-number">01</span>
+                            <span class="nav-title">Background & Context</span>
+                        </a>
+                        <a href="#project2-planning" class="section-nav-item">
+                            <span class="nav-number">02</span>
+                            <span class="nav-title">Planning & Strategy</span>
+                        </a>
+                        <a href="#project2-execution" class="section-nav-item">
+                            <span class="nav-number">03</span>
+                            <span class="nav-title">Execution</span>
+                        </a>
+                        <a href="#project2-challenges" class="section-nav-item">
+                            <span class="nav-number">04</span>
+                            <span class="nav-title">Challenges & Solutions</span>
+                        </a>
+                        <a href="#project2-outcomes" class="section-nav-item">
+                            <span class="nav-number">05</span>
+                            <span class="nav-title">Outcomes & Impact</span>
+                        </a>
+                        <a href="#project2-visual-design" class="section-nav-item">
+                            <span class="nav-number">06</span>
+                            <span class="nav-title">Visual Design</span>
+                        </a>
+                        <a href="#project2-reflection" class="section-nav-item">
+                            <span class="nav-number">07</span>
+                            <span class="nav-title">Reflection</span>
+                        </a>
+                    </div>
+                </nav>
             </div>
-        </nav>
 
-        <div id="background" class="project-section background">
-            <h2></h2>
-            <div class="section-body">
-                <div class="section-text">
-                    <p></p>
+            <div id="project2-background" class="project-section background">
+                <h2>Background & Context</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <p>
+                            Aloega operates at the intersection of healthcare, blockchain, and data privacy, where user trust and comprehension are critical barriers to adoption. At the time, Aloega was in an <strong>early-stage growth phase, with evolving product capabilities and limited market education</strong>. Messaging needed to balance technical accuracy with clarity, while building credibility in a highly regulated and trust-sensitive space.
+                        </p>
+                        <p>
+                            My role focused on <strong>reducing cognitive and conceptual friction</strong> by structuring content, visuals, and messaging systems that made abstract technology understandable, relatable, and actionable for potential users.</p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project2-planning" class="project-section planning">
+                <h2>Planning & Strategy</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <ul>
+                            <li><strong>Audience & Message Mapping:</strong> Defined core user segments and mapped blockchain and healthcare concepts into benefit-driven narratives focused on privacy, control, and trust.</li>
+                            <li><strong>Content System Design:</strong> Built a repeatable content framework spanning social, blog, and educational posts to ensure consistency across platforms.</li>
+                            <li><strong>Performance Analysis:</strong> Used engagement metrics to evaluate content clarity and refine messaging direction over time.</li>
+                        </ul>
+                    </div>
+                    <div class="section-media">
+                        <img src="./assets/project/project2/planning1.png" alt="Planning artifacts 1" class="active">
+                        <img src="./assets/project/project2/planning2.png" alt="Planning artifacts 2">
+                    </div>
+                </div>
+            </div>
+
+            <div id="project2-execution" class="project-section execution">
+                <h2>Execution</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <div class="execution-grid">
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Technical Translation:</strong> Translated blockchain-based healthcare concepts into clear, user-facing messaging, aligning technical capabilities with company's value propositions.</div>
+                                <div class="execution-item-image">
+                                    <a href="https://linktr.ee/aloega" target="_blank">
+                                        <img src="./assets/project/project2/execution1.png" alt="Execution 1">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Content System Design:</strong> Designed and executed a cross-platform content system spanning blogs and social channels, ensuring consistency in structure, tone, and information hierarchy.</div>
+                                <div class="execution-item-image">
+                                    <a href="https://aloega.medium.com/round-table-discussion-revolutionizing-healthcare-with-blockchain-technology-8ebd5cbab39e" target="_blank">
+                                        <img src="./assets/project/project2/execution2.png" alt="Execution 2">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Growth Optimization</strong> Analyzed engagement metrics and iterated on content format and messaging clarity, contributing to social media growth through educational content.</div>
+                                <div class="execution-item-image">
+                                    <img src="./assets/project/project2/execution3.png" alt="Execution 3">
+                                </div>
+                            </div>
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Brand Alignment</strong> Led internal alignment on brand voice and messaging standards, unifying external communication across product narratives, content, and public-facing touchpoints.</div>
+                                <div class="execution-item-image">
+                                    <img src="./assets/project/project2/execution4.png" alt="Execution 4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project2-challenges" class="project-section challenges">
+                <h2>Challenges & Solutions</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <div class="challenge-block">
+                            <p><strong>Technical complexity created low comprehension and low trust</strong><br> Blockchain healthcare concepts (data ownership, privacy, decentralization) were difficult to explain without sounding abstract or hype-driven.</p>
+                            <p><strong>🛠 Solution:</strong> Built a technical-to-benefit translation framework that mapped product capabilities into plain-language user outcomes (privacy, control, transparency), and standardized wording across channels to maintain accuracy and credibility..</p>
+                        </div>
+                        <div class="challenge-block">
+                            <p><strong>Messaging was inconsistent across platforms and formats</strong><br> Content lived across Medium and multiple social platforms, but tone and structure varied, weakening brand clarity and recognition.</p>
+                            <p><strong>🛠 Solution:</strong> Designed a cross-platform content system (themes, format rules, and messaging hierarchy) so each post reinforced the same narrative while adapting to platform-specific constraints.</p>
+                        </div>
+                        <div class="challenge-block">
+                            <p><strong>Educational content risked being long, dense, and easy to ignore</strong><br> Even accurate content could fail if it didn’t earn attention quickly or guide users through the idea efficiently.</p>
+                            <p><strong>🛠 Solution:</strong> Applied information hierarchy and content UX (strong hooks, scannable structure, simplified visuals) and iterated on formats to improve clarity and retention.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project2-outcomes" class="project-section outcomes">
+                <h2>Outcomes & Impact</h2>
+                <div class="section-body">
+                    <div class="section-text outcomes-top">
+                        <ul>
+                            <li>Grew Aloega’s social audience by <strong>1,000+ followers</strong>, by designing and iterating on an educational content system grounded in clear information hierarchy and platform-specific optimization.</li>
+                            <li>Improved comprehension of complex blockchain healthcare concepts, by <strong>translating technical product capabilities into benefit-driven messaging focused on privacy, data ownership, and trust</strong>.</li>
+                        </ul>
+                    </div>
+                    <div class="section-media">
+                        <div class="video-hover-container active">
+                            <video src="./assets/project/project2/outcome.mp4" loop muted playsinline></video>
+                            <div class="hover-to-play-hint"><span>Hover to play</span></div>
+                        </div>
+                    </div>
+                    <div class="section-text outcomes-rest">
+                        <ul>
+                            <li>Established a consistent <strong>cross-platform brand narrative</strong>, by implementing structured messaging frameworks and visual communication standards across blogs and social channels.</li>
+                            <li><strong>Improved content performance through analytics-led iteration</strong>, using engagement metrics to refine message hierarchy, length, and visual emphasis rather than subjective judgment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project2-visual-design" class="project-section visual-design">
+                <h2>Visual Design</h2>
+                <div class="design-gallery">
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project2/Visual Design/banner1.png" alt="Aloega Coins">
+                        <div class="design-title-overlay">Aloega Coins</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project2/Visual Design/banner2.png" alt="Aloega: Revolutionizing Data Trusts">
+                        <div class="design-title-overlay">Aloega: Revolutionizing Data Trusts</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project2/Visual Design/banner3.png" alt="Aloega: The Future of Healthcare">
+                        <div class="design-title-overlay">Aloega: The Future of Healthcare</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project2/Visual Design/banner4.png" alt="Aloega Banner">
+                        <div class="design-title-overlay">Aloega Banner</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project2-reflection" class="project-section reflection">
+                <h2>Reflection</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <p>
+                            Aloega deepened my ability to <strong>apply UX thinking beyond interfaces</strong>, using information design, messaging systems, and analytics to reduce cognitive friction in highly technical domains. Translating blockchain and healthcare concepts into clear, trust-building narratives sharpened my skill in designing clarity where misunderstanding directly impacts adoption.
+                            <br>
+                            <br>
+                            This project reinforced how <strong>structured communication systems and data-informed iteration can support early-stage product credibility and growth</strong>, even in the absence of a traditional UI surface.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="planning" class="project-section planning">
-            <h2></h2>
-            <div class="section-body">
-                <div class="section-text">
-                    <p></p>
+        <div class="project-content" data-project="project3">
+            <div class="project-header">
+                <div class="project-info">
+                    <h1 class="project-title">NAUSICAA NYC</h1>
+                    <p class="project-subtitle">A fashion-forward e-commerce platform blending artistic vision with user-centric design.</p>
                 </div>
-                <div class="section-media">
-                    <!-- Images will be dynamically added here -->
-                </div>
-            </div>
-        </div>
-
-        <div id="execution" class="project-section execution">
-            <h2></h2>
-            <div class="section-body">
-                <div class="section-text">
-                    <!-- execution grid injected here -->
+                <div class="project-media">
+                    <div class="video-link-container">
+                        <video src="./assets/project/project3/NAUSICAA.mp4" autoplay muted loop playsinline></video>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="challenges" class="project-section challenges">
-            <h2></h2>
-            <div class="section-body">
-                <div class="section-text">
-                    <p></p>
+            <div class="project-meta">
+                <div class="meta-group">
+                    <h3>Role</h3>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div class="meta-group">
+                    <h3>Timeline</h3>
+                    <p>September 2023 - December 2023</p>
+                </div>
+                <div class="meta-group">
+                    <h3>Tools</h3>
+                    <p>HTML/CSS · WordPress · Canva · Adobe Creative Suite · A/B Testing<br>Usability Testing · Qualitative Research · Persona Development</p>
                 </div>
             </div>
-        </div>
 
-        <div id="outcomes" class="project-section outcomes">
-            <h2></h2>
-            <div class="section-body">
-                <div class="section-text">
-                    <p></p>
+            <div class="content-wrapper">
+                <div class="overview-section">
+                    <h2>Overview</h2>
+                    <div class="overview-content">
+                        <p>
+                            NAUSICAA NYC is a fashion e-commerce brand blending editorial storytelling with direct-to-consumer retail. The project focused on improving product discovery, navigation clarity, and conversion flow while maintaining a strong visual identity.
+                        </p>
+                        <br>
+                        <p>
+                            I led UX and visual design improvements across the website, balancing aesthetic direction with usability, performance, and shopping behavior.
+                        </p>
+                        <br>
+                        <p><strong>This project spanned:</strong></p>
+                        <ul>
+                            <li>Complete website redesign and information architecture</li>
+                            <li>User research and persona development</li>
+                            <li>E-commerce flow optimization</li>
+                            <li>Visual design system creation</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="section-media">
-                    <!-- Images will be dynamically added here -->
+
+                <nav class="section-navigation">
+                    <div class="nav-heading">Contents</div>
+                    <div class="nav-wrapper">
+                        <a href="#project3-background" class="section-nav-item active">
+                            <span class="nav-number">01</span>
+                            <span class="nav-title">Background & Context</span>
+                        </a>
+                        <a href="#project3-planning" class="section-nav-item">
+                            <span class="nav-number">02</span>
+                            <span class="nav-title">Planning & Strategy</span>
+                        </a>
+                        <a href="#project3-execution" class="section-nav-item">
+                            <span class="nav-number">03</span>
+                            <span class="nav-title">Execution</span>
+                        </a>
+                        <a href="#project3-challenges" class="section-nav-item">
+                            <span class="nav-number">04</span>
+                            <span class="nav-title">Challenges & Solutions</span>
+                        </a>
+                        <a href="#project3-outcomes" class="section-nav-item">
+                            <span class="nav-number">05</span>
+                            <span class="nav-title">Outcomes & Impact</span>
+                        </a>
+                        <a href="#project3-visual-design" class="section-nav-item">
+                            <span class="nav-number">06</span>
+                            <span class="nav-title">Visual Design</span>
+                        </a>
+                        <a href="#project3-reflection" class="section-nav-item">
+                            <span class="nav-number">07</span>
+                            <span class="nav-title">Reflection</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div id="project3-background" class="project-section background">
+                <h2>Background & Context</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <p>
+                            Nausicaa NYC, a New York-based designer label, relies exclusively on its website to connect with audiences. The existing site prioritized visual expression but suffered from <strong>navigation friction, inconsistent hierarchy, and unclear product pathways</strong>, especially across collection browsing and product detail pages. These issues created unnecessary drop-off in the shopping experience.
+                        </p>
+                        <p>
+                            The challenge was to refine the structure without diluting the brand, ensuring the site supported both exploration and efficient purchasing. Leveraging my <strong>UX/UI background</strong>, I led this redesign using WordPress for implementation, Figma for wireframing, and extensive user research to validate decisions. 
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="visual-design" class="project-section visual-design">
-            <h2>Visual Design</h2>
-            <div class="design-gallery">
-                <!-- Design images will be dynamically added here -->
+            <div id="project3-planning" class="project-section planning">
+                <h2>Planning & Strategy</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <ul>
+                            <li><strong>User Research:</strong> Conducted 18 user interviews to analyze <strong>shopping behavior, browsing patterns, and decision friction</strong> across discovery and checkout flows.</li>
+                            <li><strong>Persona Development:</strong> Synthesized research findings into <strong>core shopper personas</strong>, clarifying motivations, purchasing triggers, and content expectations.</li>
+                            <li><strong>Information Architecture:</strong> Re-structured site navigation, collection taxonomy, and content hierarchy to <strong>improve product discovery and browsing efficiency</strong>.</li>
+                            <li><strong>Design System:</strong> Established a consistent <strong>visual system and reusable UI components</strong>, aligning brand expression with scalable e-commerce layouts.</li>
+                        </ul>
+                    </div>
+                    <div class="section-media">
+                        <img src="./assets/project/project3/planning1.jpg" alt="Planning research 1" class="active">
+                        <img src="./assets/project/project3/planning2.jpg" alt="Planning research 2">
+                        <img src="./assets/project/project3/planning3.jpg" alt="Planning research 3">
+                        <img src="./assets/project/project3/planning4.jpg" alt="Planning research 4">
+                        <img src="./assets/project/project3/planning5.jpg" alt="Planning research 5">
+                        <img src="./assets/project/project3/planning6.jpg" alt="Planning research 6">
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div id="reflection" class="project-section reflection">
-            <h2></h2>
-            <div class="section-body">
-                <div class="section-text">
-                    <p></p>
+            <div id="project3-execution" class="project-section execution">
+                <h2>Execution</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <div class="execution-grid">
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>UI Enhancement:</strong> Built and customized WordPress page layouts, translating brand aesthetics into structured, responsive UI while maintaining performance and editorial clarity.</div>
+                                <div class="execution-item-image">
+                                    <div class="video-hover-container">
+                                        <video src="./assets/project/project3/execution1.mp4" loop muted playsinline></video>
+                                        <div class="hover-to-play-hint"><span>Hover to play</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Navigation Optimization:</strong> Re-architected site navigation and category structure, improving product discoverability, collection browsing, and overall wayfinding.</div>
+                                <div class="execution-item-image">
+                                    <div class="video-hover-container">
+                                        <video src="./assets/project/project3/execution2.mp4" loop muted playsinline></video>
+                                        <div class="hover-to-play-hint"><span>Hover to play</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Testing & Optimization:</strong> Conducted A/B testing on navigation patterns and content layout to evaluate usability and optimize conversion-related interactions.</div>
+                                <div class="execution-item-image">
+                                    <img src="./assets/project/project3/execution3.png" alt="Execution testing">
+                                </div>
+                            </div>
+                            <div class="execution-item">
+                                <div class="execution-item-text"><strong>Visual Design:</strong> Developed a cohesive visual system across pages, aligning typography, imagery, and layout to ensure consistency across all customer touchpoints.</div>
+                                <div class="execution-item-image">
+                                    <img src="./assets/project/project3/execution4.png" alt="Execution visual design">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project3-challenges" class="project-section challenges">
+                <h2>Challenges & Solutions</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <div class="challenge-block">
+                            <p><strong>Brand-first visuals reduced usability</strong><br> The original site emphasized strong visual identity but lacked clear hierarchy, making it difficult for users to scan content and understand next actions.</p>
+                            <p><strong>🛠 Solution:</strong> Introduced clearer layout structure, spacing, and typographic hierarchy, preserving the brand’s aesthetic while improving readability and scannability across key pages.</p>
+                        </div>
+                        <div class="challenge-block">
+                            <p><strong>Product discovery was fragmented</strong><br> Users struggled to move efficiently between collections, product categories, and individual product pages due to unclear navigation and grouping.</p>
+                            <p><strong>🛠 Solution:</strong> Re-architected the site’s information architecture and navigation taxonomy, creating clearer categories and predictable browsing paths that supported exploration and shopping intent.</p>
+                        </div>
+                        <div class="challenge-block">
+                            <p><strong>Maintaining consistency across pages</strong><br> As content expanded, visual and interaction inconsistencies risked diluting brand cohesion and usability.</p>
+                            <p><strong>🛠 Solution:</strong> Established a cohesive visual system and reusable layout patterns within WordPress, ensuring consistency across pages while supporting future content updates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project3-outcomes" class="project-section outcomes">
+                <h2>Outcomes & Impact</h2>
+                <div class="section-body">
+                    <div class="section-text outcomes-top">
+                        <ul>
+                            <li>Validated core UX decisions through <strong>18 user interviews, and develop 6 personas</strong>, directly informing navigation restructuring, content hierarchy, and key shopping flows.</li>
+                            <li><strong>Redesigned and shipped end-to-end site structure</strong>, including global navigation, collection pages, and product detail layouts within a live WordPress environment.</li>
+                            <li><strong>Reduced browsing friction across primary shopping paths</strong>, by standardizing layout patterns and validating navigation changes through <strong>A/B testing</strong>.</li>
+                        </ul>
+                    </div>
+                    <div class="section-media">
+                        <div class="video-hover-container active">
+                            <video src="./assets/project/project3/outcome.mp4" loop muted playsinline></video>
+                            <div class="hover-to-play-hint"><span>Hover to play</span></div>
+                        </div>
+                    </div>
+                    <div class="section-text outcomes-rest">
+                        <ul>
+                            <li><strong>Enhanced brand consistency</strong> by implementing a reusable visual and layout system, enabling consistent application across new pages and future collection launches without redesign overhead.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project3-visual-design" class="project-section visual-design">
+                <h2>Visual Design</h2>
+                <div class="design-gallery">
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project3/Visual Design/color.png" alt="Color Palette">
+                        <div class="design-title-overlay">Color Palette</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project3/Visual Design/Banner.png" alt="Banner">
+                        <div class="design-title-overlay">Banner</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project3/Visual Design/Home.png" alt="Home Page">
+                        <div class="design-title-overlay">Home Page</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project3/Visual Design/Journal.png" alt="Journal">
+                        <div class="design-title-overlay">Journal</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project3/Visual Design/Lookbook1.png" alt="Lookbook - Fall 22">
+                        <div class="design-title-overlay">Lookbook - Fall 22</div>
+                    </div>
+                    <div class="design-gallery-item">
+                        <img src="./assets/project/project3/Visual Design/Lookbook2.png" alt="Lookbook - Fall 23">
+                        <div class="design-title-overlay">Lookbook - Fall 23</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="project3-reflection" class="project-section reflection">
+                <h2>Reflection</h2>
+                <div class="section-body">
+                    <div class="section-text">
+                        <p>
+                            This project strengthened my ability to <strong>design consumer-facing e-commerce experiences where brand expression and usability must coexist</strong>. Conducting user interviews and validating changes through testing reinforced the importance of grounding visual and structural decisions in real user behavior rather than aesthetic preference alone.
+                            <br>
+                            <br>
+                            Working within a <strong>live WordPress production environment</strong> also sharpened my approach to scalability—designing layouts and systems that support future content growth without repeated redesign. This experience reinforced how thoughtful information architecture, testing, and implementation discipline directly shape the effectiveness of consumer UX.</p>
+                    </div>
                 </div>
             </div>
         </div>

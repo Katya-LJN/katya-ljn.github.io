@@ -14,10 +14,12 @@ body {
   color: #333333; /* Default text color */
   padding-bottom: 10vh; /* Add padding to prevent overlap with fixed nav */
   padding-top: 60px; /* Height of top navigation */
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 p {
@@ -173,12 +175,6 @@ body.on-profile #desktop-nav {
   transform: translateY(-2px);
 }
 
-/* Remove height from the general nav selector if only desktop nav is fixed */
-nav {
-  /* height: 15vh; */ /* Removed height from general nav */
-  /* Other general nav styles can remain if applicable to hamburger nav */
-}
-
 .nav-links {
   gap: 2.5rem; /* Increased gap */
   list-style: none;
@@ -201,6 +197,10 @@ a:hover {
 .logo {
   font-size: 1.8rem; /* Slightly smaller logo */
   font-weight: 600;
+  max-width: calc(100% - 56px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .logo:hover {
@@ -219,11 +219,14 @@ a:hover {
   background: white;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   z-index: 1002;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  margin-left: auto;
 }
 
 .hamburger-icon {
@@ -258,6 +261,12 @@ a:hover {
   pointer-events: none;
   transform: translateY(-10px);
   transition: all 0.3s ease;
+  max-width: 80vw;
+  box-sizing: border-box;
+}
+
+.menu-links li {
+  list-style: none;
 }
 
 .menu-links.open {
@@ -271,6 +280,7 @@ a:hover {
   padding: 0.8rem 1.5rem;
   color: #333;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .menu-links a:hover {
@@ -302,23 +312,18 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 0;
+  opacity: 1;
   visibility: visible;
-  transition: opacity 0.6s ease-in-out;
-  will-change: opacity;
   position: relative;
   z-index: 1;
 }
 
 section.active {
-  opacity: 1;
-  visibility: visible;
   z-index: 2;
 }
 
 /* Ensure sections are immediately visible when directly loaded */
 section:target {
-  opacity: 1;
   visibility: visible;
   z-index: 2;
 }
@@ -732,6 +737,8 @@ section:target {
 
 @media (max-width: 768px) {
   .project-item {
+    flex-direction: column;
+    align-items: stretch;
     padding: 1rem 0;
     gap: 1.5rem; /* Increased gap */
   }
@@ -926,11 +933,6 @@ article,
 .details-container,
 #projects .color-container {
   display: none; /* Hide instead of deleting just in case */
-}
-
-/* Ensure experience-sub-title is only used where intended (like project titles) */
-.project-title {
-  /* Styles moved inside .bento-item */
 }
 
 /* Remove arrow icon styles */
@@ -1733,37 +1735,46 @@ section:first-of-type {
   }
 
   #profile {
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 1.5rem;
     text-align: center;
     padding-top: 4rem; /* Account for top navigation */
   }
 
   .profile-image {
+    order: -1;
+    width: min(300px, 80vw);
     max-width: 300px;
-    min-width: 300px;
-    height: 300px;
+    min-width: 0;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
   
   .round-profile-pic {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
   
   .profile-content {
     align-items: center;
+    width: 100%;
+    min-width: 0;
   }
 
   .hero-title {
     font-size: 2.5rem;
     text-align: center;
     margin: 0 auto 1rem;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .hero-subtitle {
     font-size: 1.1rem;
     text-align: center;
     max-width: 100%;
+    min-width: 0;
   }
 
   .contact-info-upper-container {
@@ -1788,18 +1799,45 @@ section:first-of-type {
   }
 
   .profile-image {
-    max-width: 250px;
-    min-width: 250px;
-    height: 250px;
+    width: min(240px, 78vw);
+    max-width: 240px;
+    min-width: 0;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
   
   .round-profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .text-container p {
     font-size: 1rem;
+}
+
+@media (max-width: 360px) {
+  section, #profile, #about, #contact, #bento-grid {
+    width: 100%;
+    padding: 0.75rem 0.75rem;
+  }
+
+  #profile {
+    padding-top: 4rem;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .profile-image {
+    width: min(200px, 70vw);
+    max-width: 200px;
+  }
 }
 
 .contact-info-upper-container {

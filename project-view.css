@@ -17,6 +17,16 @@
     max-width: 1200px; /* match your nav's max-width */
     width: 90%;
     margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.project-content {
+    display: none;
+}
+
+.project-content.active {
+    display: block;
 }
 
 #top-nav {
@@ -89,10 +99,12 @@
 /* Content Layout */
 .content-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
     gap: 4rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
+    position: static;
+    align-items: start;
 }
 
 /* Overview Section */
@@ -164,6 +176,25 @@
     line-height: 1.8;
     color: #555;
     margin: 0;
+}
+
+.challenge-block {
+    margin: 0;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgba(246, 211, 101, 0.25);
+    border-left: 4px solid rgba(246, 211, 101, 0.6);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(246, 211, 101, 0.08), rgba(253, 160, 133, 0.06));
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.project-section.challenges .section-text {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.challenge-block p + p {
+    margin-top: 0.75rem;
 }
 
 
@@ -445,6 +476,8 @@
 @media (max-width: 1200px) {
     .project-view-container {
         width: 95%;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
@@ -452,6 +485,8 @@
 @media (max-width: 992px) {
     .project-view-container {
         width: 100%;
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
     }
     .content-wrapper {
         grid-template-columns: 1fr;
@@ -479,6 +514,11 @@
 
 /* Tweak type scale on smaller tablets */
 @media (max-width: 768px) {
+    .project-view-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
     .project-header {
         margin-bottom: 40px;
     }
@@ -488,6 +528,11 @@
 
 /* Fine-tune on phones */
 @media (max-width: 576px) {
+    .project-view-container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
     .project-header .project-title    { font-size: 1.8rem; }
     .project-header .project-subtitle { font-size: 1rem; }
     .project-meta                     { gap: 1.5rem; }
@@ -495,85 +540,92 @@
 
 /* Section Navigation */
 .section-navigation {
-    margin: 4rem 0;
-    padding: 2rem 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    align-self: start;
+    position: static !important;
+    width: 100%;
+    display: block;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+}
+
+.nav-heading {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #9aa0a6;
+    margin-bottom: 1rem;
 }
 
 .nav-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);  /* 4 columns will wrap your 7 items into 2 rows (4 + 3) */
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
 }
 
 .section-nav-item {
     display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    background: #ffffff;
-    border-radius: 12px;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.35rem 0;
     text-decoration: none;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
+    color: #9aa0a6;
+    transition: color 0.2s ease;
 }
 
 .section-nav-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
-}
-
-.section-nav-item:hover::before {
-    opacity: 0.1;
+    content: none;
 }
 
 .section-nav-item.active {
-    border-color: #f6d365;
+    color: #333;
+    font-weight: 600;
+}
+
+.section-nav-item:hover {
+    color: #333;
 }
 
 .nav-number {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    color: #f6d365;
-    margin-bottom: 0.5rem;
-    position: relative;
-    z-index: 2;
+    color: inherit;
+    min-width: 2.5rem;
+    text-transform: none;
 }
 
 .nav-title {
-    font-size: 1.1rem;
-    color: #333;
+    font-size: 0.95rem;
+    color: inherit;
     font-weight: 500;
-    position: relative;
-    z-index: 2;
-}
-
-.section-nav-item:hover .nav-title {
-    color: #000;
 }
 
 /* Responsive adjustments for section navigation */
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
+    .section-navigation {
+        margin-top: 1.5rem;
+    }
+
     .nav-wrapper {
-        gap: 1.5rem;
+        max-width: 100%;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .nav-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem 1.5rem;
+        max-width: 100%;
+    }
+
+    .section-nav-item {
+        padding: 0.25rem 0;
     }
 }
 
@@ -582,12 +634,8 @@
         grid-template-columns: 1fr;
     }
 
-    .section-nav-item {
-        padding: 1.25rem;
-    }
-
     .nav-title {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 }
 
@@ -605,6 +653,45 @@
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
+}
+
+/* Outcomes: first two bullets sit beside media, rest below */
+.project-section.outcomes .section-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.project-section.outcomes .outcomes-top {
+    grid-column: 1;
+}
+
+.project-section.outcomes .section-media {
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 520px;
+}
+
+.project-section.outcomes .outcomes-rest {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 992px) {
+    .project-section.outcomes .section-body {
+        grid-template-columns: 1fr;
+    }
+
+    .project-section.outcomes .section-media {
+        grid-column: 1;
+        grid-row: auto;
+        max-width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .project-section.outcomes .outcomes-rest {
+        grid-column: 1;
+    }
 }
 
 /* Video Container Styles */
@@ -850,6 +937,12 @@
     margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+    .execution-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .execution-item {
     display: flex;
     flex-direction: column;
@@ -942,6 +1035,8 @@
 .project-media {
   flex: 1;
   max-width: 50%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 /* 4) Make sure the gallery fills its container */
@@ -966,6 +1061,19 @@
     .project-media {
         margin-top: 2rem;
     }
+
+    .project-media .video-link-container {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        min-height: 220px;
+    }
+
+    .project-header .project-media {
+        flex: 1 1 100%;
+        max-width: 100%;
+        justify-content: stretch;
+        align-items: stretch;
+    }
 }
 
 /* Further tweak on phones */
@@ -979,6 +1087,18 @@
     .project-meta {
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .project-media .video-link-container {
+        min-height: 200px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-header .project-media {
+        flex: 1 1 100%;
+        max-width: 100%;
+        justify-content: stretch;
+        align-items: stretch;
     }
 }
 
@@ -1068,6 +1188,12 @@
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
+}
+
+.execution-item-image .video-hover-container {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .video-hover-container video {
@@ -1235,6 +1361,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .project-header .project-media {
+        flex: 1 1 100%;
+        max-width: 100%;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-header .project-media {
+        flex: 1 1 100%;
+        max-width: 100%;
+        justify-content: stretch;
+        align-items: stretch;
+    }
 }
 
 /* Header media gallery and container */
