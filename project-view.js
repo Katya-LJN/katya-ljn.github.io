@@ -18,6 +18,16 @@ function getActiveProject() {
     return activeProject;
 }
 
+function toggleMenu() {
+    const menu = document.querySelector('.menu-links');
+    const icon = document.querySelector('.hamburger-icon');
+    if (!menu || !icon) return;
+
+    const isOpen = menu.classList.toggle('open');
+    icon.classList.toggle('open');
+    icon.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+}
+
 function initSectionMedia(scope) {
     const mediaSections = scope.querySelectorAll('.section-media');
     mediaSections.forEach(container => {
