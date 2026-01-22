@@ -6,6 +6,7 @@
     <title>Project View</title>
     <link rel="icon" href="./assets/me.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
     <link rel="stylesheet" href="project-view.css">
 </head>
 <body>
@@ -29,6 +30,27 @@
             </ul>
         </div>
     </header>
+
+    <nav id="hamburger-nav">
+        <a href="index.html#bento-grid" class="nav-home" aria-label="Back to projects">
+            <svg class="back-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="project-menu-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links" id="project-menu-links">
+                <li><a href="index.html#bento-grid" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="./assets/Resume-Jiangning (Katya) Lian.pdf" target="_blank" onclick="toggleMenu()">Resume</a></li>
+            </div>
+        </div>
+    </nav>
 
     <div class="project-view-container">
         <div class="project-content" data-project="project1">
@@ -58,7 +80,7 @@
                 </div>
                 <div class="meta-group">
                     <h3>Skills</h3>
-                    <p>Figma · HTML/CSS · Google Analytics · Information Architecture · A/B Testing<br>Usability Testing · Accessibility Testing (WCAG 2.1 AA) · Design System<br>Adobe Creative Suite · Canva · Mailchimp · SaaS</p>
+                    <p>Figma · HTML/CSS · Google Analytics · Information Architecture · A/B Testing · Usability Testing · Accessibility Testing (WCAG 2.1 AA) · Design System · Adobe Creative Suite · Canva · Mailchimp · SaaS</p>
                 </div>
             </div>
 
@@ -319,7 +341,7 @@
                 </div>
                 <div class="meta-group">
                     <h3>Skills</h3>
-                    <p>Press Release · Content Creation · Copywriting<br>Social Analytics · Content Calendar · Adobe Creative Suite · Canva</p>
+                    <p>Press Release · Content Creation · Copywriting · Social Analytics · Content Calendar · Adobe Creative Suite · Canva</p>
                 </div>
             </div>
 
@@ -554,7 +576,7 @@
                 </div>
                 <div class="meta-group">
                     <h3>Tools</h3>
-                    <p>HTML/CSS · WordPress · Canva · Adobe Creative Suite · A/B Testing<br>Usability Testing · Qualitative Research · Persona Development</p>
+                    <p>HTML/CSS · WordPress · Canva · Adobe Creative Suite · A/B Testing · Usability Testing · Qualitative Research · Persona Development</p>
                 </div>
             </div>
 
