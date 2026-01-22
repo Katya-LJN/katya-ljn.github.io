@@ -519,6 +519,12 @@ section:target {
   .about-left .title {
   text-align: center;
   }
+
+  .about-right {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1332,6 +1338,7 @@ body.scrolled #top-nav {
     grid-template-columns: 1fr;
     gap: 1rem;
     padding: 0;
+    justify-items: center;
   }
   
   .info-item {
