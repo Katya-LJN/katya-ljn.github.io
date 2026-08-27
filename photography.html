@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography | Jiangning (Katya) Lian</title>
+    <link rel="icon" href="./assets/me.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body class="gallery-page">
+    <header id="top-nav">
+      <div class="top-nav-container">
+        <div class="top-nav-left">
+          <a class="name" href="index.html#profile">Jiangning (Katya) Lian</a>
+        </div>
+        <div class="top-nav-right">
+          <ul class="top-nav-links">
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#photography">Photography</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <nav id="desktop-nav">
+      <a href="index.html#profile" class="home-button" aria-label="Go to home">
+        <img src="./assets/Home.svg" alt="Home" width="25px" height="25px" />
+      </a>
+      <div class="nav-container">
+        <div class="nav-left">
+          <button class="resume-btn" onclick="window.open('./assets/Resume-Jiangning (Katya) Lian.pdf', '_blank')">
+            Resume
+          </button>
+        </div>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#photography">Photography</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <a href="index.html#profile" class="logo">Jiangning (Katya) Lian</a>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="index.html#photography" onclick="toggleMenu()">Photography</a></li>
+          <li><a href="index.html#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="index.html#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <main class="photo-gallery-page">
+      <section class="gallery-hero">
+        <p class="section__text__p1">Photography</p>
+        <h1 class="title"><span class="highlight">Photography</span></h1>
+        <p>
+          I enjoy being close to nature and finding a little quiet through birds, water, trees, and small moments outside.
+        </p>
+      </section>
+
+      <section class="gallery-grid-section" aria-label="Full photography gallery">
+        <div class="gallery-grid">
+          <div class="gallery-row landscape-row">
+            <figure class="gallery-item landscape gallery-item-cardinal">
+              <img src="./assets/photography/DSC09330.jpg" alt="A nature photograph in a horizontal frame" />
+            </figure>
+            <figure class="gallery-item landscape">
+              <img src="./assets/photography/DSC08688.jpg" alt="A blue jay framed by pine branches" />
+            </figure>
+            <figure class="gallery-item landscape">
+              <img src="./assets/photography/DSC09268.jpg" alt="A bird photographed in natural light" />
+            </figure>
+          </div>
+
+          <div class="gallery-row mixed-row">
+            <figure class="gallery-item portrait">
+              <img src="./assets/photography/DSC09310.jpg" alt="A turtle resting on a branch over green water" />
+            </figure>
+            <figure class="gallery-item landscape">
+              <img src="./assets/photography/DSC09443.jpg" alt="A hawk perched among green branches" />
+            </figure>
+            <figure class="gallery-item portrait">
+              <img src="./assets/photography/DSC09476.jpg" alt="A small bird beneath green leaves" />
+            </figure>
+          </div>
+
+          <div class="gallery-row landscape-row">
+            <figure class="gallery-item landscape">
+              <img src="./assets/photography/DSC08766.jpg" alt="A bird in a bright natural setting" />
+            </figure>
+            <figure class="gallery-item landscape">
+              <img src="./assets/photography/DSC08856.jpg" alt="A bird resting among branches" />
+            </figure>
+            <figure class="gallery-item landscape">
+              <img src="./assets/photography/DSC09366.jpg" alt="A nature photograph with soft depth of field" />
+            </figure>
+          </div>
+
+          <div class="gallery-row mixed-row">
+            <figure class="gallery-item portrait">
+              <img src="./assets/photography/DSC09424.jpg" alt="A vertical nature photograph framed by water and leaves" />
+            </figure>
+            <figure class="gallery-item landscape">
+              <img src="./assets/photography/DSC09390.jpg" alt="A birding photograph with natural surroundings" />
+            </figure>
+            <figure class="gallery-item portrait">
+              <img src="./assets/photography/DSC09690.jpg" alt="A vertical birding photograph in natural light" />
+            </figure>
+          </div>
+
+          <div class="gallery-row final-row">
+            <figure class="gallery-item landscape">
+              <img src="./assets/photography/DSC09480.jpg" alt="A birding photograph in a horizontal frame" />
+            </figure>
+            <figure class="gallery-item portrait gallery-item-cormorant">
+              <img src="./assets/photography/DSC09727.jpg" alt="A vertical nature photograph with a bird in the frame" />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

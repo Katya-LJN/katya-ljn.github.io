@@ -79,6 +79,25 @@
     margin-bottom: 2rem;
 }
 
+.text-only-header {
+    display: block;
+    padding: 3rem 0 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.text-only-header .project-info {
+    max-width: 900px;
+}
+
+.project-kicker {
+    color: #777;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
 /* Move meta out of header flex and give it its own spacing */
 .project-meta {
     display: flex;
@@ -216,6 +235,62 @@
 
 .challenge-block p + p {
     margin-top: 0.75rem;
+}
+
+.current-work-detail .execution-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.current-work-detail .execution-item {
+    min-height: 190px;
+}
+
+.project4-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.project4-metrics div {
+    min-height: 155px;
+    padding: 1.25rem;
+    border: 1px solid rgba(246, 211, 101, 0.24);
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(246, 211, 101, 0.1), rgba(253, 160, 133, 0.07));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+}
+
+.project4-metrics strong {
+    color: #333;
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.project4-metrics span {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+#project4-process .section-text ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+#project4-process .section-text li {
+    margin: 0;
+    padding: 1.25rem 1.35rem;
+    border: 1px solid rgba(246, 211, 101, 0.24);
+    border-left: 4px solid rgba(246, 211, 101, 0.8);
+    border-radius: 8px;
+    background: #fff;
+    line-height: 1.7;
 }
 
 
@@ -1489,4 +1564,100 @@
 .video-link-overlay:hover span {
     transform: translateY(0);
     opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .current-work-detail .execution-grid,
+    .project4-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #project4-process .section-text ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-only-header {
+        padding-top: 1.5rem;
+    }
+
+    .current-work-detail .execution-grid,
+    .project4-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .project4-metrics div {
+        min-height: 150px;
+    }
+}
+
+/* Project 4 responsive overrides live late to beat generic project list styles. */
+.current-work-detail .content-wrapper {
+    grid-template-columns: 1fr;
+}
+
+.current-work-detail .section-navigation {
+    max-width: 100%;
+}
+
+.current-work-detail .project-section .section-body {
+    display: block;
+    width: 100%;
+}
+
+.current-work-detail .project-section .section-text {
+    width: 100%;
+}
+
+.current-work-detail .project-section {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.current-work-detail #project4-impact.project-section.outcomes .section-body {
+    display: block;
+}
+
+.current-work-detail #project4-impact {
+    margin-bottom: 5rem;
+}
+
+.current-work-detail #project4-process {
+    margin-top: 5rem;
+}
+
+.current-work-detail .project4-metrics {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.current-work-detail #project4-process .section-text ul {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.current-work-detail #project4-process .section-text li {
+    margin: 0;
+    padding: 1.25rem 1.35rem;
+    border: 1px solid rgba(246, 211, 101, 0.24);
+    border-left: 4px solid rgba(246, 211, 101, 0.8);
+    border-radius: 8px;
+    background: #fff;
+    line-height: 1.7;
+}
+
+.current-work-detail #project4-process .section-text li::before {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .current-work-detail .project4-metrics,
+    .current-work-detail #project4-process .section-text ul {
+        grid-template-columns: 1fr;
+    }
 }

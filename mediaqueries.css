@@ -109,6 +109,7 @@
 @media screen and (max-width: 768px) {
   section {
     padding: 6vh 2rem;
+    box-sizing: border-box;
   }
   #profile {
     display: flex;
@@ -118,6 +119,9 @@
     text-align: center;
     padding: 100px 2rem 2rem 2rem;
     min-height: calc(100vh - 60px);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .hero-title {
     font-size: 2.2rem;
@@ -149,10 +153,16 @@
 @media screen and (max-width: 576px) {
   section {
     padding: 6vh 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   #profile {
     display: flex;
     padding: 100px 1rem 2rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   .hero-title {
     font-size: 2rem;
@@ -248,6 +258,108 @@
     max-width: 250px;
     min-width: 0;
     height: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .profile-content {
+    width: min(100%, 18rem);
+    max-width: calc(100vw - 3rem);
+    overflow: visible;
+  }
+
+  .hero-title {
+    font-size: 1.35rem !important;
+    line-height: 1.25;
+    max-width: calc(100vw - 2rem);
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .hero-title .highlight {
+    display: inline !important;
+    padding: 0 0.1rem;
+    white-space: normal !important;
+  }
+
+  .hero-subtitle {
+    width: min(100%, 18rem);
+    max-width: calc(100vw - 3rem);
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: break-word;
+  }
+
+  .profile-buttons .cta {
+    width: fit-content;
+    align-self: center;
+    overflow: visible;
+  }
+
+  .current-work-intro,
+  .current-work-intro p,
+  .current-work-title,
+  .current-work-layout,
+  .current-work-card,
+  .photography-header,
+  .photography-header p,
+  .gallery-hero,
+  .gallery-hero p {
+    max-width: calc(100vw - 2rem);
+    width: 100%;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+
+  .current-work-intro {
+    width: min(100%, 18rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .current-work-title {
+    font-size: 1.8rem;
+    max-width: min(100%, 18rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .current-work-intro p {
+    max-width: min(100%, 18rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .current-work-title,
+  .photography-header .title,
+  .gallery-hero .title {
+    line-height: 1.12;
+  }
+
+  .gallery-hero {
+    width: min(100%, 18rem);
+    max-width: calc(100vw - 3rem);
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .gallery-hero .title {
+    font-size: 1.8rem;
+    max-width: 18rem;
+    overflow-wrap: break-word;
+  }
+
+  .gallery-hero .highlight {
+    display: inline;
+    padding: 0 0.1rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .gallery-hero p:last-child {
+    max-width: 18rem;
+    font-size: 1rem;
+    overflow-wrap: break-word;
   }
 }
 

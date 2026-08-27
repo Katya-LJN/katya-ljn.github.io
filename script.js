@@ -128,7 +128,7 @@ function createScrollingText() {
   // Clear any existing content
   container.innerHTML = '';
 
-  const text = 'MY PROJECTS';
+  const text = 'PAST PROJECTS';
   const copies = 40;
 
   // Create wrapper for infinite scroll
